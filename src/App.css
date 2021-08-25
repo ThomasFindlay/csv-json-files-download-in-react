@@ -1,0 +1,17 @@
+.App {
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.usersTable th,
+.usersTable td {
+  padding: 0.4rem 0.6rem;
+}
+
+.actionBtns {
+  margin-top: 1rem;
+}
+
+.actionBtns button + button {
+  margin-left: 1rem;
+}
