@@ -5,6 +5,7 @@
 
 .usersTable th,
 .usersTable td {
+  text-align: left;
   padding: 0.4rem 0.6rem;
 }
 
