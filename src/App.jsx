@@ -17,6 +17,16 @@ const downloadFile = ({ data, fileName, fileType }) => {
   a.remove();
 };
 
+const exportToJson = e => {
+  e.preventDefault();
+  downloadFile({
+    data: JSON.stringify(usersData.users),
+    fileName: "users.json",
+    fileType: "text/json",
+  });
+};
+
+
 const exportToCsv = e => {
   e.preventDefault();
   let headers = ["Id,Name,Surname,Age"];
@@ -33,14 +43,7 @@ const exportToCsv = e => {
     fileType: "text/csv",
   });
 };
-const exportToJson = e => {
-  e.preventDefault();
-  downloadFile({
-    data: JSON.stringify(usersData.users),
-    fileName: "users.json",
-    fileType: "text/json",
-  });
-};
+
 
 function App() {
   return (
