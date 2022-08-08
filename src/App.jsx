@@ -33,7 +33,18 @@ const exportToCsv = e => {
 
   let usersCsv = usersData.users.reduce((acc, user) => {
     const { id, name, surname, age } = user;
-    acc.push([id, name, surname, age].join(","));
+    const processData = (data) => {
+      if (!data) {
+        return ''
+      }
+      return String(data).trim()
+    }
+    acc.push([
+      processData(id),
+      processData(name),
+      processData(surname),
+      processData(surname),
+    ].join(","));
     return acc;
   }, []);
 
